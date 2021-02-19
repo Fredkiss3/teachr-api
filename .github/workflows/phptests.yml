@@ -11,6 +11,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./back
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -29,11 +33,9 @@ jobs:
           php-version: "7.4.8"
 
       - name: Validate composer.json and composer.lock
-        working-directory: ./back
         run: composer validate
 
       - name: Cache Composer packages
-        working-directory: ./back
         id: composer-cache
         uses: actions/cache@v2
         with:
@@ -43,7 +45,6 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: Install dependencies
-        working-directory: ./back
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --no-progress --no-suggest
 
@@ -53,5 +54,4 @@ jobs:
       # - name: Build Docker
       #   run:  make build-docker
       - name: Run test suite
-        working-directory: ./back
         run: composer run-script test
