@@ -23,18 +23,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: "Goto PHP project"
-        run: cd back/
-
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "7.4.8" 
+          php-version: "7.4.8"
 
       - name: Validate composer.json and composer.lock
+        working-directory: ./back
         run: composer validate
 
       - name: Cache Composer packages
+        working-directory: ./back
         id: composer-cache
         uses: actions/cache@v2
         with:
@@ -44,6 +43,7 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: Install dependencies
+        working-directory: ./back
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --no-progress --no-suggest
 
@@ -53,4 +53,5 @@ jobs:
       # - name: Build Docker
       #   run:  make build-docker
       - name: Run test suite
+        working-directory: ./back
         run: composer run-script test
