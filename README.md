@@ -5,8 +5,20 @@ Test technique demandé par Teach'r.
 L'objectif du projet est de créer une API qui offre 3 routes pour manager
 une ressource ***"Teachr"***.
 
+Sommaire: 
+  * [I- Pré-requis](#i--pr--requis)
+  * [II- Comment lancer le projet ?](#ii--comment-lancer-le-projet--)
+    + [Tests](#tests)
+  * [III- Routes](#iii--routes)
+    + [`GET  /teachr`](#-get---teachr-)
+    + [`POST /teachr`](#-post--teachr-)
+    + [`PUT  /teachr/{id}`](#-put---teachr--id--)
+        - [Note](#nb--)
+
+
 ## I- Pré-requis
 
+Pour lancer le projet il faut :
 - avoir `composer` installé
 - avoir `php >= 7.2` installé
 - avoir `MySQL >= 5.0` installé
@@ -146,7 +158,7 @@ La réponse est l'objet modifié :
 }
 ```
 
-### NB :
+#### Note :
 Si l'id passé en paramètre ne correspond à aucun objet, la réponse renvoyée est une réponse 404 de la forme :
 ```js
 {
