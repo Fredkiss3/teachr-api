@@ -11,17 +11,13 @@ Sommaire:
   * [II- Comment lancer le projet ?](#ii--comment-lancer-le-projet--)
     + [Tests](#tests)
   * [III- Routes](#iii--routes)
-    + [`GET  /teachr`](#-get---teachr-)
-    + [`POST /teachr`](#-post--teachr-)
-    + [`PUT  /teachr/{id}`](#-put---teachr--id--)
-        - [Note](#nb--)
 
 
 ## I- Pré-requis
 
 Pour lancer le projet il faut :
 - avoir `composer` installé
-- avoir `php >= 7.2` installé
+- avoir `php >= 7.4` installé
 - avoir `MySQL >= 5.0` installé
 
 ## II- Comment lancer le projet ?

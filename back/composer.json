@@ -1,10 +1,12 @@
 {
     "type": "project",
+    "name": "fredkiss3/teachr-api",
+    "description": "Test technique demandé par Teachr",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.2.5",
+        "php": ">=7.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "1.11.99.1",
@@ -13,12 +15,15 @@
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
         "hautelook/alice-bundle": "^2.8",
+        "liip/test-fixtures-bundle": "^1.11",
+        "sensio/framework-extra-bundle": "^6.1",
         "symfony/browser-kit": "5.2.*",
         "symfony/console": "5.2.*",
         "symfony/css-selector": "5.2.*",
         "symfony/dotenv": "5.2.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "5.2.*",
+        "symfony/maker-bundle": "^1.29",
         "symfony/phpunit-bridge": "^5.2",
         "symfony/proxy-manager-bridge": "5.2.*",
         "symfony/yaml": "5.2.*"
@@ -46,6 +51,9 @@
         "symfony/polyfill-php72": "*"
     },
     "scripts": {
+        "test": [
+            "php -d memory_limit=-1 ./bin/phpunit tests"
+        ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
@@ -65,5 +73,8 @@
             "allow-contrib": false,
             "require": "5.2.*"
         }
-    }
+    },
+  "require-dev": {
+    "ext-json": "*"
+  }
 }

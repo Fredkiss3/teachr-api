@@ -1,3 +1,5 @@
+![Build Status](https://github.com/Fredkiss3/teachr-api/workflows/PHP%20Tests/badge.svg?branch=main)
+
 # Teach'r API 
 
 Test technique demandé par Teach'r.

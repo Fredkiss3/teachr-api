@@ -1,0 +1,5 @@
+App\Entity\Teachr:
+  teachr{1..10}:
+    prenom: <firstName()>
+    description: <realText()>
+    formation: <company()>

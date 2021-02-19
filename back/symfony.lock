@@ -122,6 +122,9 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
     },
+    "liip/test-fixtures-bundle": {
+        "version": "1.11.1"
+    },
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
@@ -137,6 +140,9 @@
             "./config/packages/dev/nelmio_alice.yaml",
             "./config/packages/test/nelmio_alice.yaml"
         ]
+    },
+    "nikic/php-parser": {
+        "version": "v4.10.4"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -161,6 +167,18 @@
     },
     "sebastian/recursion-context": {
         "version": "4.0.4"
+    },
+    "sensio/framework-extra-bundle": {
+        "version": "5.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
+        },
+        "files": [
+            "./config/packages/sensio_framework_extra.yaml"
+        ]
     },
     "symfony/browser-kit": {
         "version": "v5.2.3"
@@ -259,6 +277,15 @@
     },
     "symfony/http-kernel": {
         "version": "v5.2.3"
+    },
+    "symfony/maker-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
     },
     "symfony/orm-pack": {
         "version": "v2.1.0"
