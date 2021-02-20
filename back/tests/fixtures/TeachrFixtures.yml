@@ -3,3 +3,8 @@ App\Entity\Teachr:
     prenom: <firstName()>
     description: <realText()>
     formation: <company()>
+
+
+#App\Entity\Statistics:
+#  stats:
+#    num_teachrs: 10

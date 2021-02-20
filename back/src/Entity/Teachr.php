@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\TeachrRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=TeachrRepository::class)
@@ -19,6 +20,8 @@ class Teachr
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     *
      */
     private $prenom;
 
@@ -29,11 +32,15 @@ class Teachr
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank
+     *
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     *
      */
     private $formation;
 
@@ -59,16 +66,9 @@ class Teachr
         return $this;
     }
 
-    public function getDateDeCreation(): ?\DateTimeInterface
+    public function getDateDeCreation(): int
     {
-        return $this->dateDeCreation;
-    }
-
-    public function setDateDeCreation(\DateTimeInterface $dateDeCreation): self
-    {
-        $this->dateDeCreation = $dateDeCreation;
-
-        return $this;
+        return (!(empty($this->dateDeCreation)) ? $this->dateDeCreation->getTimestamp() : 0);
     }
 
     public function getDescription(): ?string
