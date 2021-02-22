@@ -59,7 +59,7 @@
     },
     "scripts": {
         "test": [
-            "./bin/phpunit tests"
+            "php -d memory_limit=-1 ./bin/phpunit tests"
         ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
