@@ -13,7 +13,6 @@ Sommaire:
 
 Pour lancer le projet il faut :
 - avoir `npm >= 12` ou `yarn` installé
-- avoir l'API en arrière-plan
 - avoir `expo` installé sur votre téléphone (optionnel)
 - [configurer votre environnement](https://reactnative.dev/docs/environment-setup) (pour lancer l'application android
 utiliser sans expo) 
