@@ -1,35 +1,37 @@
-import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {HomePage} from "./pages/HomePage";
+import {FavPage} from "./pages/Fav";
+import 'react-native-gesture-handler';
+import {NavigationContainer} from "@react-navigation/native";
+import {createStackNavigator} from "@react-navigation/stack";
+import {StyleSheet} from "react-native";
 
-export default function App() {
-  const [todos, setTodos] = useState([
-    { task: 'Do Something', completed: false },
-    { task: 'Do Something', completed: true },
-    { task: 'Do Something', completed: false },
-    { task: 'Do Something', completed: true },
-    { task: 'Do Something', completed: false },
-  ]);
+const Stack = createStackNavigator();
 
-  const count = 10;
+const App = () => {
 
-  return (
-      <View style={styles.container}>
-        {todos.map((todo, i) => {
-          return (
-              <Text key={i}>
-                {todo.task} {todo.completed ? '🥅' : '🎯'}
-              </Text>
-          );
-        })}
-      </View>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: true
+                }}
+            >
+                <Stack.Screen
+                    options={{headerShown: false}}
+                    component={HomePage}
+                    name={"Home"}
+                />
+                <Stack.Screen
+                    options={{headerShown: false}}
+                    component={FavPage}
+                    name={"Fav"}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+
