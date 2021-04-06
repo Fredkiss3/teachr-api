@@ -7,6 +7,8 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "Project to show \"Teach'r\" Resources",
+    "githubUrl": "https://github.com/Fredkiss3/teachr-api/tree/main/front"
   }
 }

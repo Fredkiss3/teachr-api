@@ -4,6 +4,11 @@
 
 Test technique demandé par Teach'r.
 
+## Captures d'écran du projet front
+
+![On boarding](front/onboarding.png) &nbsp;&nbsp;&nbsp;&nbsp;
+![Main page](front/main%20page.png)
+
 L'objectif du projet est de créer une API qui offre 3 routes pour manager
 une ressource ***"Teachr"***. Et une application mobile pour afficher cette ressource.
 
