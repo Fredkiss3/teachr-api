@@ -4,7 +4,7 @@
 
 Test technique demandé par Teach'r.
 
-## Captures d'écran du projet front
+## Captures d'écran de l'application mobile
 
 ![On boarding](front/onboarding.png) &nbsp;&nbsp;&nbsp;&nbsp;
 ![Main page](front/main%20page.png)
